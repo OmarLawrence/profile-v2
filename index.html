@@ -1,14 +1,24 @@
-x<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth scroll-pt-20">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Omar Lawrence | Fractional Product Owner & Technical BA</title>
+    <meta name="description" content="Fractional Product Owner & Technical BA in Cape Town. Developer-ready backlogs, Gherkin user stories and AI-accelerated specs for startups and software teams.">
+    <meta name="theme-color" content="#0f172a">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Omar Lawrence | Fractional Product Owner & Technical BA">
+    <meta property="og:description" content="Senior product leadership and AI-accelerated delivery for startups, agencies and growing tech teams.">
+    <!-- TODO: add <link rel="canonical">, og:url and og:image (e.g. a 1200x630 image) once the live URL is known -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%232563eb'/%3E%3Ctext x='50' y='66' font-size='44' font-weight='700' text-anchor='middle' fill='white' font-family='sans-serif'%3EOL%3C/text%3E%3C/svg%3E">
     <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Pinned Play CDN. For production, replace with a compiled stylesheet (Tailwind CLI) -->
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
     <!-- FontAwesome for professional icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
@@ -18,10 +28,9 @@ x<!DOCTYPE html>
                         sans: ['Inter', 'sans-serif'],
                     },
                     colors: {
-                        slate900: '#0f172a',
-                        slate800: '#1e293b',
+                        
                         accentBlue: '#2563eb',
-                        accentTeal: '#0d9488',
+                        accentTeal: '#0f766e',
                     }
                 }
             }
@@ -32,25 +41,27 @@ x<!DOCTYPE html>
         .hero-gradient {
             background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
         }
+        @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto !important; } }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-accentBlue selection:text-white">
+    <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-white focus:text-slate-900">Skip to content</a>
 
     <!-- Navigation Header -->
-    <header class="sticky top-0 z-50 bg-slate900/95 backdrop-blur-md border-b border-slate-800 text-white">
+    <header class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-slate-800 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <a href="#" class="flex items-center gap-3 group">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-accentBlue to-accentTeal flex items-center justify-center font-bold text-lg text-white shadow-lg">
                     OL
                 </div>
                 <div>
-                    <span class="font-bold text-lg tracking-tight block group-hover:text-accentTeal transition-colors">Omar Lawrence</span>
+                    <span class="font-bold text-lg tracking-tight block group-hover:text-teal-400 transition-colors">Omar Lawrence</span>
                     <span class="text-xs text-slate-400 font-medium block">Fractional Product Owner</span>
                 </div>
             </a>
             
             <!-- Desktop Nav Links -->
-            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <nav aria-label="Primary" class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
                 <a href="#problem" class="hover:text-white transition-colors">The Problem</a>
                 <a href="#services" class="hover:text-white transition-colors">Services</a>
                 <a href="#why-me" class="hover:text-white transition-colors">Why Me</a>
@@ -65,8 +76,8 @@ x<!DOCTYPE html>
             </div>
 
             <!-- Mobile Menu Button -->
-            <button id="menu-btn" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
-                <i class="fa-solid fa-bars text-xl"></i>
+            <button id="menu-btn" type="button" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden text-slate-300 hover:text-white focus:outline-none p-2">
+                <i class="fa-solid fa-bars text-xl" aria-hidden="true"></i>
             </button>
         </div>
 
@@ -81,6 +92,7 @@ x<!DOCTYPE html>
         </div>
     </header>
 
+    <main id="main">
     <!-- Hero Section -->
     <section class="hero-gradient text-white py-20 lg:py-32 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#2563eb_1px,transparent_1px)] [background-size:16px_16px]"></div>
@@ -88,7 +100,7 @@ x<!DOCTYPE html>
             
             <div class="lg:col-span-7 space-y-6">
                 <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-500/15 border border-blue-400/30 text-blue-300 text-xs font-semibold tracking-wide">
-                    <i class="fa-solid fa-circle-check text-accentTeal"></i> Available for Fractional & Retainer Roles
+                    <i class="fa-solid fa-circle-check text-teal-400" aria-hidden="true"></i> Available for Fractional & Retainer Roles
                 </div>
                 
                 <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
@@ -102,7 +114,7 @@ x<!DOCTYPE html>
                 <div class="flex flex-col sm:flex-row gap-4 pt-4">
                     <a href="#contact" class="px-8 py-4 rounded-xl bg-accentBlue hover:bg-blue-600 text-white font-semibold text-center transition-all shadow-xl shadow-blue-600/20 flex items-center justify-center gap-2">
                         <span>Book a Discovery Call</span>
-                        <i class="fa-solid fa-arrow-right text-sm"></i>
+                        <i class="fa-solid fa-arrow-right text-sm" aria-hidden="true"></i>
                     </a>
                     <a href="#services" class="px-8 py-4 rounded-xl bg-slate-800/80 hover:bg-slate-800 border border-slate-700 text-slate-200 font-semibold text-center transition-all flex items-center justify-center">
                         View Services & Retainers
@@ -111,23 +123,24 @@ x<!DOCTYPE html>
 
                 <div class="flex items-center gap-6 pt-6 text-sm text-slate-400">
                     <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-check text-accentTeal"></i> 12+ Years Exp
+                        <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i> 12+ Years Exp
                     </div>
                     <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-check text-accentTeal"></i> AI-Optimized
+                        <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i> AI-Optimized
                     </div>
                     <div class="flex items-center gap-2">
-                        <i class="fa-solid fa-check text-accentTeal"></i> Remote Ready
+                        <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i> Remote Ready
                     </div>
                 </div>
             </div>
 
             <div class="lg:col-span-5 relative">
                 <div class="relative mx-auto max-w-md lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border border-slate-700 bg-slate-800 p-2">
-                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Product management workspace" class="rounded-xl object-cover w-full h-[380px] opacity-90 hover:opacity-100 transition-opacity" onerror="this.src='https://placehold.co/600x400/1e293b/cbd5e1?text=Product+Management'">
+                    <!-- TODO: replace this stock photo with a real photo of yourself -->
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80" alt="Product management workspace" width="800" height="380" class="rounded-xl object-cover w-full h-[380px] opacity-90 hover:opacity-100 transition-opacity" onerror="this.onerror=null;this.src='https://placehold.co/600x400/1e293b/cbd5e1?text=Product+Management'">
                     <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-slate-900/90 backdrop-blur-md border border-slate-700">
                         <div class="flex items-center gap-3">
-                            <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse"></div>
+                            <div class="w-3 h-3 rounded-full bg-emerald-400 animate-pulse motion-reduce:animate-none"></div>
                             <span class="text-xs font-semibold text-slate-200">Omar Lawrence | Cape Town, South Africa</span>
                         </div>
                         <p class="text-xs text-slate-400 mt-1">Bridging business strategy & technical execution.</p>
@@ -143,8 +156,8 @@ x<!DOCTYPE html>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-accentBlue mb-3">The Challenge & The Solution</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Is Your Engineering Team Blocked by Vague Requirements?</h3>
+                <p class="text-xs font-bold uppercase tracking-widest text-accentBlue mb-3">The Challenge & The Solution</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Is Your Engineering Team Blocked by Vague Requirements?</h2>
                 <p class="text-slate-600 mt-4 text-lg">Building software is expensive. Every hour developers spend deciphering ambiguous user stories, guessing business logic, or waiting for feedback burns time and budget.</p>
             </div>
 
@@ -152,27 +165,27 @@ x<!DOCTYPE html>
                 <!-- Pain 1 -->
                 <div class="p-8 rounded-2xl bg-rose-50/50 border border-rose-100 shadow-sm relative overflow-hidden">
                     <div class="w-12 h-12 rounded-xl bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-xl mb-6">
-                        <i class="fa-solid fa-triangle-exclamation"></i>
+                        <i class="fa-solid fa-triangle-exclamation" aria-hidden="true"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Developers Waiting for Specs</h4>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Developers Waiting for Specs</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">Unclear tickets lead to endless back-and-forth, scope creep, costly rework, and missed sprint deadlines.</p>
                 </div>
 
                 <!-- Pain 2 -->
                 <div class="p-8 rounded-2xl bg-amber-50/50 border border-amber-100 shadow-sm relative overflow-hidden">
                     <div class="w-12 h-12 rounded-xl bg-amber-100 text-amber-600 flex items-center justify-center font-bold text-xl mb-6">
-                        <i class="fa-solid fa-user-clock"></i>
+                        <i class="fa-solid fa-user-clock" aria-hidden="true"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Founders Pulled into Tickets</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">You’re spending precious hours managing JIRA and answering team questions instead of growing your business.</p>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Founders Pulled into Tickets</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">You’re spending precious hours managing Jira and answering team questions instead of growing your business.</p>
                 </div>
 
                 <!-- Pain 3 -->
                 <div class="p-8 rounded-2xl bg-indigo-50/50 border border-indigo-100 shadow-sm relative overflow-hidden">
                     <div class="w-12 h-12 rounded-xl bg-indigo-100 text-indigo-600 flex items-center justify-center font-bold text-xl mb-6">
-                        <i class="fa-solid fa-arrows-split-up-and-left"></i>
+                        <i class="fa-solid fa-arrows-split-up-and-left" aria-hidden="true"></i>
                     </div>
-                    <h4 class="text-lg font-bold text-slate-900 mb-2">Business & Tech Disconnect</h4>
+                    <h3 class="text-lg font-bold text-slate-900 mb-2">Business & Tech Disconnect</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">High-level strategic company goals get completely lost in translation by the time code is actually deployed.</p>
                 </div>
             </div>
@@ -187,9 +200,9 @@ x<!DOCTYPE html>
                     </p>
                 </div>
                 <div class="flex-shrink-0">
-                    <a href="#contact" class="px-6 py-3.5 rounded-xl bg-accentTeal hover:bg-teal-600 text-white font-semibold text-sm transition-all shadow-lg flex items-center gap-2">
+                    <a href="#contact" class="px-6 py-3.5 rounded-xl bg-accentTeal hover:bg-teal-800 text-white font-semibold text-sm transition-all shadow-lg flex items-center gap-2">
                         <span>Get Started Today</span>
-                        <i class="fa-solid fa-arrow-right"></i>
+                        <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
                     </a>
                 </div>
             </div>
@@ -202,8 +215,8 @@ x<!DOCTYPE html>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-accentBlue mb-3">Core Offerings</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Tailored Product Services</h3>
+                <p class="text-xs font-bold uppercase tracking-widest text-accentBlue mb-3">Core Offerings</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Tailored Product Services</h2>
                 <p class="text-slate-600 mt-4 text-lg">Flexible engagement models designed to match your team's exact velocity and project lifecycle.</p>
             </div>
 
@@ -213,51 +226,50 @@ x<!DOCTYPE html>
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-blue-50 text-accentBlue flex items-center justify-center text-2xl font-bold mb-6">
-                            <i class="fa-solid fa-chess-board"></i>
+                            <i class="fa-solid fa-chess-board" aria-hidden="true"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-3">Fractional Product Ownership</h4>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Fractional Product Ownership</h3>
                         <p class="text-xs font-semibold text-accentBlue uppercase tracking-wider mb-4">Ongoing Agile Leadership</p>
                         <ul class="space-y-3 text-sm text-slate-600">
                             <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-check text-accentTeal mt-1"></i>
+                                <i class="fa-solid fa-check text-accentTeal mt-1" aria-hidden="true"></i>
                                 <span>Full management of sprint planning, backlog grooming, and priority alignment.</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-check text-accentTeal mt-1"></i>
+                                <i class="fa-solid fa-check text-accentTeal mt-1" aria-hidden="true"></i>
                                 <span>Daily/weekly async developer support and technical unblocking.</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-check text-accentTeal mt-1"></i>
+                                <i class="fa-solid fa-check text-accentTeal mt-1" aria-hidden="true"></i>
                                 <span>Clear stakeholder reporting and roadmap progress visibility.</span>
                             </li>
                         </ul>
                     </div>
                     <div class="pt-8 border-t border-slate-100 mt-6">
-                        <span class="text-xs text-slate-500 font-medium">Format: Monthly Retainer (10–20 hrs/wk)</span>
+                        <span class="text-xs text-slate-500 font-medium">Format: Monthly Retainer (from ~10–12 hrs/wk)</span>
                     </div>
                 </div>
 
                 <!-- Service 2 -->
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between hover:shadow-md transition-shadow relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-accentTeal text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-bl-xl">Most Popular</div>
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-teal-50 text-accentTeal flex items-center justify-center text-2xl font-bold mb-6">
-                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            <i class="fa-solid fa-wand-magic-sparkles" aria-hidden="true"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-3">AI-Powered Backlog & Spec Sprints</h4>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">AI-Powered Backlog & Spec Sprints</h3>
                         <p class="text-xs font-semibold text-accentTeal uppercase tracking-wider mb-4">Rapid Developer Handovers</p>
                         <ul class="space-y-3 text-sm text-slate-600">
                             <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-check text-accentTeal mt-1"></i>
+                                <i class="fa-solid fa-check text-accentTeal mt-1" aria-hidden="true"></i>
                                 <span>Translating discovery calls & wireframes into structured PRDs.</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-check text-accentTeal mt-1"></i>
+                                <i class="fa-solid fa-check text-accentTeal mt-1" aria-hidden="true"></i>
                                 <span>High-precision Gherkin user stories with Given/When/Then criteria.</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-check text-accentTeal mt-1"></i>
-                                <span>AI-accelerated spec drafting for 2x faster delivery times.</span>
+                                <i class="fa-solid fa-check text-accentTeal mt-1" aria-hidden="true"></i>
+                                <span>AI-accelerated spec drafting that shortens the path from idea to developer handover.</span>
                             </li>
                         </ul>
                     </div>
@@ -270,21 +282,21 @@ x<!DOCTYPE html>
                 <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 flex flex-col justify-between hover:shadow-md transition-shadow">
                     <div>
                         <div class="w-14 h-14 rounded-2xl bg-indigo-50 text-indigo-600 flex items-center justify-center text-2xl font-bold mb-6">
-                            <i class="fa-solid fa-clipboard-check"></i>
+                            <i class="fa-solid fa-clipboard-check" aria-hidden="true"></i>
                         </div>
-                        <h4 class="text-xl font-bold text-slate-900 mb-3">Product & Process Audits</h4>
+                        <h3 class="text-xl font-bold text-slate-900 mb-3">Product & Process Audits</h3>
                         <p class="text-xs font-semibold text-indigo-600 uppercase tracking-wider mb-4">Velocity & Workflow Reset</p>
                         <ul class="space-y-3 text-sm text-slate-600">
                             <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-check text-accentTeal mt-1"></i>
+                                <i class="fa-solid fa-check text-accentTeal mt-1" aria-hidden="true"></i>
                                 <span>Complete audit and cleanup of messy, disorganized backlogs.</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-check text-accentTeal mt-1"></i>
-                                <span>Refining team rituals, JIRA/Linear setups, and handoff friction points.</span>
+                                <i class="fa-solid fa-check text-accentTeal mt-1" aria-hidden="true"></i>
+                                <span>Refining team rituals, Jira/Linear setups, and handoff friction points.</span>
                             </li>
                             <li class="flex items-start gap-2">
-                                <i class="fa-solid fa-check text-accentTeal mt-1"></i>
+                                <i class="fa-solid fa-check text-accentTeal mt-1" aria-hidden="true"></i>
                                 <span>Actionable recommendations to boost immediate shipping velocity.</span>
                             </li>
                         </ul>
@@ -305,8 +317,8 @@ x<!DOCTYPE html>
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-6 space-y-6">
-                    <h2 class="text-xs font-bold uppercase tracking-widest text-accentBlue">Proven Experience</h2>
-                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Partner With Omar Lawrence?</h3>
+                    <p class="text-xs font-bold uppercase tracking-widest text-accentBlue">Proven Experience</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Why Partner With Omar Lawrence?</h2>
                     <p class="text-slate-600 text-lg leading-relaxed">
                         You don't need another generic consultant who only talks theory. You need a seasoned product leader who knows how software is built, tested, and shipped.
                     </p>
@@ -314,40 +326,40 @@ x<!DOCTYPE html>
                     <div class="space-y-4 pt-2">
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-blue-50 text-accentBlue flex items-center justify-center flex-shrink-0 font-bold">
-                                <i class="fa-solid fa-medal"></i>
+                                <i class="fa-solid fa-medal" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-slate-900">12+ Years of Proven Expertise</h4>
+                                <h3 class="text-base font-bold text-slate-900">12+ Years of Proven Expertise</h3>
                                 <p class="text-sm text-slate-600">Over a decade driving product roadmaps, managing dev teams, and shipping successful products.</p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-teal-50 text-accentTeal flex items-center justify-center flex-shrink-0 font-bold">
-                                <i class="fa-solid fa-code"></i>
+                                <i class="fa-solid fa-code" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-slate-900">Technical Understanding & Code Fluency</h4>
+                                <h3 class="text-base font-bold text-slate-900">Technical Understanding & Code Fluency</h3>
                                 <p class="text-sm text-slate-600">I speak developer language, read code, and bridge business requirements with technical reality seamlessly.</p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center flex-shrink-0 font-bold">
-                                <i class="fa-solid fa-bolt"></i>
+                                <i class="fa-solid fa-bolt" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-slate-900">AI-Enhanced Efficiency</h4>
+                                <h3 class="text-base font-bold text-slate-900">AI-Enhanced Efficiency</h3>
                                 <p class="text-sm text-slate-600">Leveraging cutting-edge AI workflows to research, draft, and stress-test user stories faster and sharper.</p>
                             </div>
                         </div>
 
                         <div class="flex items-start gap-4">
                             <div class="w-10 h-10 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center flex-shrink-0 font-bold">
-                                <i class="fa-solid fa-sliders"></i>
+                                <i class="fa-solid fa-sliders" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <h4 class="text-base font-bold text-slate-900">Flexible & Cost-Effective Scale</h4>
+                                <h3 class="text-base font-bold text-slate-900">Flexible & Cost-Effective Scale</h3>
                                 <p class="text-sm text-slate-600">Get senior executive product leadership without taking on full-time overhead costs or long-term HR lock-ins.</p>
                             </div>
                         </div>
@@ -356,7 +368,7 @@ x<!DOCTYPE html>
 
                 <div class="lg:col-span-6">
                     <div class="relative rounded-2xl overflow-hidden shadow-xl border border-slate-200">
-                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team collaboration" class="w-full h-[460px] object-cover" onerror="this.src='https://placehold.co/600x500/e2e8f0/475569?text=Collaboration'">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80" alt="Team collaboration" width="800" height="460" loading="lazy" decoding="async" class="w-full h-[460px] object-cover" onerror="this.onerror=null;this.src='https://placehold.co/600x500/e2e8f0/475569?text=Collaboration'">
                         <div class="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent flex items-end p-8">
                             <div class="text-white">
                                 <p class="text-xs uppercase tracking-widest text-teal-300 font-semibold mb-1">Collaboration First</p>
@@ -375,8 +387,8 @@ x<!DOCTYPE html>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Investment Plans</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold">Transparent Pricing & Retainers</h3>
+                <p class="text-xs font-bold uppercase tracking-widest text-blue-400 mb-3">Investment Plans</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold">Transparent Pricing & Retainers</h2>
                 <p class="text-slate-400 mt-4 text-lg">Flexible engagement terms tailored to fit your current team size and growth velocity.</p>
             </div>
 
@@ -386,7 +398,7 @@ x<!DOCTYPE html>
                 <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700 flex flex-col justify-between">
                     <div>
                         <span class="px-3 py-1 rounded-full bg-blue-500/15 text-blue-300 text-xs font-semibold">Introductory Offer</span>
-                        <h4 class="text-2xl font-bold mt-4 mb-2">Launch Retainer</h4>
+                        <h3 class="text-2xl font-bold mt-4 mb-2">Launch Retainer</h3>
                         <p class="text-xs text-slate-400 mb-6">Ideal for short-term launches, backlog cleanups, or testing fractional support.</p>
                         
                         <div class="mb-6 pb-6 border-b border-slate-700">
@@ -397,21 +409,21 @@ x<!DOCTYPE html>
 
                         <ul class="space-y-3 text-sm text-slate-300 mb-8">
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>Complete backlog audit & reset</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>Sprint planning facilitation</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>Developer unblocking & support</span>
                             </li>
                         </ul>
                     </div>
 
-                    <a href="#contact" class="w-full py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm text-center transition-all">
+                    <a href="#contact" data-package="Launch Retainer" class="w-full py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm text-center transition-all">
                         Select Launch Plan
                     </a>
                 </div>
@@ -421,7 +433,7 @@ x<!DOCTYPE html>
                     <div class="absolute -top-3.5 left-1/2 transform -translate-x-1/2 bg-accentBlue text-white text-xs font-bold uppercase tracking-widest px-4 py-1 rounded-full">Most Popular</div>
                     <div>
                         <span class="px-3 py-1 rounded-full bg-teal-500/15 text-teal-300 text-xs font-semibold">Ongoing Retainer</span>
-                        <h4 class="text-2xl font-bold mt-4 mb-2">Fractional PO</h4>
+                        <h3 class="text-2xl font-bold mt-4 mb-2">Fractional PO</h3>
                         <p class="text-xs text-slate-400 mb-6">For startups and dev agencies needing steady, reliable product leadership.</p>
                         
                         <div class="mb-6 pb-6 border-b border-slate-700">
@@ -433,25 +445,25 @@ x<!DOCTYPE html>
 
                         <ul class="space-y-3 text-sm text-slate-300 mb-8">
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>End-to-end sprint management</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>Roadmap planning & grooming</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>Weekly stakeholder alignment</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>Priority async communication</span>
                             </li>
                         </ul>
                     </div>
 
-                    <a href="#contact" class="w-full py-3 rounded-xl bg-accentBlue hover:bg-blue-600 text-white font-semibold text-sm text-center transition-all shadow-lg shadow-blue-600/30">
+                    <a href="#contact" data-package="Fractional PO Monthly Retainer" class="w-full py-3 rounded-xl bg-accentBlue hover:bg-blue-600 text-white font-semibold text-sm text-center transition-all shadow-lg shadow-blue-600/30">
                         Secure Fractional PO
                     </a>
                 </div>
@@ -460,37 +472,38 @@ x<!DOCTYPE html>
                 <div class="bg-slate-800 rounded-2xl p-8 border border-slate-700 flex flex-col justify-between">
                     <div>
                         <span class="px-3 py-1 rounded-full bg-indigo-500/15 text-indigo-300 text-xs font-semibold">Fixed Project</span>
-                        <h4 class="text-2xl font-bold mt-4 mb-2">Spec Sprint</h4>
+                        <h3 class="text-2xl font-bold mt-4 mb-2">Spec Sprint</h3>
                         <p class="text-xs text-slate-400 mb-6">Turning a new product concept into a launch-ready development spec.</p>
                         
                         <div class="mb-6 pb-6 border-b border-slate-700">
-                            <span class="text-4xl font-extrabold">R18k - R25k</span>
+                            <span class="text-4xl font-extrabold">R18k – R25k</span>
                             <p class="text-xs text-slate-400 mt-2">1-Week Intensive Turnaround</p>
                         </div>
 
                         <ul class="space-y-3 text-sm text-slate-300 mb-8">
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>Complete PRD documentation</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>Gherkin User Stories & Criteria</span>
                             </li>
                             <li class="flex items-center gap-2">
-                                <i class="fa-solid fa-check text-accentTeal"></i>
+                                <i class="fa-solid fa-check text-teal-400" aria-hidden="true"></i>
                                 <span>Developer handoff session</span>
                             </li>
                         </ul>
                     </div>
 
-                    <a href="#contact" class="w-full py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm text-center transition-all">
+                    <a href="#contact" data-package="AI-Powered Backlog &amp; Spec Sprint" class="w-full py-3 rounded-xl bg-slate-700 hover:bg-slate-600 text-white font-semibold text-sm text-center transition-all">
                         Book Spec Sprint
                     </a>
                 </div>
 
             </div>
 
+            <p class="text-center text-sm text-slate-400 mt-10">Need a <a href="#contact" data-package="Product &amp; Process Audit" class="text-teal-400 underline underline-offset-2 hover:text-teal-300">Product &amp; Process Audit</a> instead? Audits are scoped as a 1-week fixed engagement. Get in touch for a quote.</p>
         </div>
     </section>
 
@@ -499,8 +512,8 @@ x<!DOCTYPE html>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <h2 class="text-xs font-bold uppercase tracking-widest text-accentBlue mb-3">Simple Workflow</h2>
-                <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How We Start Working Together</h3>
+                <p class="text-xs font-bold uppercase tracking-widest text-accentBlue mb-3">Simple Workflow</p>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">How We Start Working Together</h2>
                 <p class="text-slate-600 mt-4 text-lg">A straightforward 3-step process to transition your product roadmaps from chaotic to crystal clear.</p>
             </div>
 
@@ -511,7 +524,7 @@ x<!DOCTYPE html>
                     <div class="w-12 h-12 rounded-full bg-accentBlue text-white font-bold text-lg flex items-center justify-center mx-auto mb-6 shadow-md">
                         1
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Discovery Call (30 Mins)</h4>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Discovery Call (30 Mins)</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">We discuss your product, current development bottlenecks, team setup, and immediate goals.</p>
                 </div>
 
@@ -520,7 +533,7 @@ x<!DOCTYPE html>
                     <div class="w-12 h-12 rounded-full bg-accentTeal text-white font-bold text-lg flex items-center justify-center mx-auto mb-6 shadow-md">
                         2
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Scoping & Agreement</h4>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Scoping & Agreement</h3>
                     <p class="text-slate-600 text-sm leading-relaxed">We select the right package (Fractional Retainer or Spec Sprint) and align on priorities and milestones.</p>
                 </div>
 
@@ -529,8 +542,8 @@ x<!DOCTYPE html>
                     <div class="w-12 h-12 rounded-full bg-indigo-600 text-white font-bold text-lg flex items-center justify-center mx-auto mb-6 shadow-md">
                         3
                     </div>
-                    <h4 class="text-xl font-bold text-slate-900 mb-3">Immediate Execution</h4>
-                    <p class="text-slate-600 text-sm leading-relaxed">I jump into your tools (JIRA, Linear, Notion), clean up backlogs, and keep your dev team shipping cleanly.</p>
+                    <h3 class="text-xl font-bold text-slate-900 mb-3">Immediate Execution</h3>
+                    <p class="text-slate-600 text-sm leading-relaxed">I jump into your tools (Jira, Linear, Notion), clean up backlogs, and keep your dev team shipping cleanly.</p>
                 </div>
 
             </div>
@@ -544,8 +557,8 @@ x<!DOCTYPE html>
             
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                 <div class="lg:col-span-5 space-y-6">
-                    <h2 class="text-xs font-bold uppercase tracking-widest text-accentBlue">Get in Touch</h2>
-                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Ready to Streamline Your Product Roadmaps?</h3>
+                    <p class="text-xs font-bold uppercase tracking-widest text-accentBlue">Get in Touch</p>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900">Ready to Streamline Your Product Roadmaps?</h2>
                     <p class="text-slate-600 text-base leading-relaxed">
                         Let’s keep your developers focused on writing code while I handle the product specs, user stories, and sprint alignment.
                     </p>
@@ -553,40 +566,40 @@ x<!DOCTYPE html>
                     <div class="space-y-4 pt-4 text-slate-700">
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-accentBlue shadow-sm">
-                                <i class="fa-solid fa-user"></i>
+                                <i class="fa-solid fa-user" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <span class="text-xs text-slate-400 block font-medium">Name</span>
+                                <span class="text-xs text-slate-600 block font-medium">Name</span>
                                 <span class="font-bold">Omar Lawrence</span>
                             </div>
                         </div>
 
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-accentBlue shadow-sm">
-                                <i class="fa-solid fa-briefcase"></i>
+                                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <span class="text-xs text-slate-400 block font-medium">Role</span>
+                                <span class="text-xs text-slate-600 block font-medium">Role</span>
                                 <span class="font-bold">Senior Fractional Product Owner & Technical BA</span>
                             </div>
                         </div>
 
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-accentBlue shadow-sm">
-                                <i class="fa-solid fa-location-dot"></i>
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <span class="text-xs text-slate-400 block font-medium">Location</span>
+                                <span class="text-xs text-slate-600 block font-medium">Location</span>
                                 <span class="font-bold">Cape Town, South Africa (Global Remote)</span>
                             </div>
                         </div>
 
                         <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-xl bg-white border border-slate-200 flex items-center justify-center text-accentBlue shadow-sm">
-                                <i class="fa-solid fa-envelope"></i>
+                                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                             </div>
                             <div>
-                                <span class="text-xs text-slate-400 block font-medium">Email</span>
+                                <span class="text-xs text-slate-600 block font-medium">Email</span>
                                 <span class="font-bold">omar.lawrence.pm@gmail.com</span>
                             </div>
                         </div>
@@ -595,47 +608,47 @@ x<!DOCTYPE html>
 
                 <div class="lg:col-span-7">
                     <div class="bg-white p-8 sm:p-10 rounded-2xl shadow-sm border border-slate-200">
-                        <h4 class="text-xl font-bold text-slate-900 mb-6">Schedule an Intro Call / Message Me</h4>
+                        <h3 class="text-xl font-bold text-slate-900 mb-6">Schedule an Intro Call / Message Me</h3>
                         
-                        <form id="contact-form" action="https://formspree.io/f/xoejkzen" method="POST" onsubmit="handleFormSubmit(event)" class="space-y-4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        <div>
-            <label class="block text-xs font-semibold text-slate-600 mb-1">Your Name *</label>
-            <input type="text" name="name" required placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-accentBlue text-sm">
-        </div>
-        <div>
-            <label class="block text-xs font-semibold text-slate-600 mb-1">Your Email *</label>
-            <input type="email" name="email" required placeholder="john@company.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-accentBlue text-sm">
-        </div>
-    </div>
+                        <form id="contact-form" action="https://formspree.io/f/xoejkzen" method="POST" class="space-y-4">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="cf-name" class="block text-xs font-semibold text-slate-600 mb-1">Your Name *</label>
+                                    <input id="cf-name" type="text" name="name" required autocomplete="name" placeholder="John Doe" class="w-full px-4 py-3 rounded-xl border border-slate-400 focus:outline-none focus:border-accentBlue focus:ring-2 focus:ring-accentBlue/30 text-sm">
+                                </div>
+                                <div>
+                                    <label for="cf-email" class="block text-xs font-semibold text-slate-600 mb-1">Your Email *</label>
+                                    <input id="cf-email" type="email" name="email" required autocomplete="email" placeholder="john@company.com" class="w-full px-4 py-3 rounded-xl border border-slate-400 focus:outline-none focus:border-accentBlue focus:ring-2 focus:ring-accentBlue/30 text-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label for="cf-company" class="block text-xs font-semibold text-slate-600 mb-1">Company / Project Name</label>
+                                <input id="cf-company" type="text" name="company" autocomplete="organization" placeholder="Acme Software" class="w-full px-4 py-3 rounded-xl border border-slate-400 focus:outline-none focus:border-accentBlue focus:ring-2 focus:ring-accentBlue/30 text-sm">
+                            </div>
+                            <div>
+                                <label for="cf-package" class="block text-xs font-semibold text-slate-600 mb-1">Select Interest / Package</label>
+                                <select id="cf-package" name="package" class="w-full px-4 py-3 rounded-xl border border-slate-400 focus:outline-none focus:border-accentBlue focus:ring-2 focus:ring-accentBlue/30 text-sm bg-white">
+                                    <option>Fractional PO Monthly Retainer</option>
+                                    <option>AI-Powered Backlog & Spec Sprint</option>
+                                    <option>Launch Retainer</option>
+                                    <option>Product & Process Audit</option>
+                                    <option>General Inquiry</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="cf-message" class="block text-xs font-semibold text-slate-600 mb-1">Project Details or Message *</label>
+                                <textarea id="cf-message" name="message" rows="4" required placeholder="Tell me about your team and immediate backlog bottlenecks..." class="w-full px-4 py-3 rounded-xl border border-slate-400 focus:outline-none focus:border-accentBlue focus:ring-2 focus:ring-accentBlue/30 text-sm"></textarea>
+                            </div>
+                            <!-- Honeypot: real users never see or fill this -->
+                            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
+                            <p id="form-error" role="alert" class="hidden p-3 rounded-xl bg-rose-50 border border-rose-200 text-rose-800 text-sm"></p>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-accentBlue hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-md shadow-blue-600/20 disabled:opacity-60 disabled:cursor-not-allowed">
+                                Send Message / Book Call
+                            </button>
+                            <p class="text-xs text-slate-500 text-center">By sending this form you agree to be contacted about your enquiry.</p>
+                        </form>
 
-    <div>
-        <label class="block text-xs font-semibold text-slate-600 mb-1">Company / Project Name</label>
-        <input type="text" name="company" placeholder="Acme Software" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-accentBlue text-sm">
-    </div>
-
-    <div>
-        <label class="block text-xs font-semibold text-slate-600 mb-1">Select Interest / Package</label>
-        <select name="package" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-accentBlue text-sm bg-white">
-            <option>Fractional PO Monthly Retainer</option>
-            <option>AI-Powered Backlog & Spec Sprint</option>
-            <option>Launch Retainer (R500/hr)</option>
-            <option>Product & Process Audit</option>
-            <option>General Inquiry</option>
-        </select>
-    </div>
-
-    <div>
-        <label class="block text-xs font-semibold text-slate-600 mb-1">Project Details or Message *</label>
-        <textarea name="message" rows="4" required placeholder="Tell me about your team and immediate backlog bottlenecks..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:outline-none focus:border-accentBlue text-sm"></textarea>
-    </div>
-
-    <button type="submit" class="w-full py-4 rounded-xl bg-accentBlue hover:bg-blue-700 text-white font-semibold text-sm transition-all shadow-md shadow-blue-600/20">
-        Send Message / Book Call
-    </button>
-</form>
-
-                        <div id="success-msg" class="hidden mt-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm text-center font-medium">
+                        <div id="success-msg" role="status" aria-live="polite" tabindex="-1" class="hidden mt-6 p-4 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-sm text-center font-medium focus:outline-none">
                             Thank you! Your message has been received. Omar will get back to you shortly.
                         </div>
                     </div>
@@ -644,6 +657,8 @@ x<!DOCTYPE html>
 
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
@@ -656,11 +671,12 @@ x<!DOCTYPE html>
             </div>
 
             <div class="flex items-center gap-6 text-sm">
-                <a href="https://linkedin.com" target="_blank" rel="noopener" class="hover:text-white transition-colors">
-                    <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn
+                <!-- TODO: replace with your LinkedIn profile URL -->
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">
+                    <i class="fa-brands fa-linkedin text-lg" aria-hidden="true"></i> LinkedIn
                 </a>
                 <a href="mailto:omar.lawrence.pm@gmail.com" class="hover:text-white transition-colors">
-                    <i class="fa-solid fa-envelope text-lg"></i> Email
+                    <i class="fa-solid fa-envelope text-lg" aria-hidden="true"></i> Email
                 </a>
                 <a href="#contact" class="hover:text-white transition-colors">
                     Book Call
@@ -671,58 +687,75 @@ x<!DOCTYPE html>
 
     <!-- JavaScript for Mobile Menu & Form submission -->
    <script>
-    // Toggle mobile menu
+    // Mobile menu
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    menuBtn.addEventListener('click', () => {
-        mobileMenu.classList.toggle('hidden');
+    function setMenu(open) {
+        mobileMenu.classList.toggle('hidden', !open);
+        menuBtn.setAttribute('aria-expanded', String(open));
+    }
+    menuBtn.addEventListener('click', () => setMenu(mobileMenu.classList.contains('hidden')));
+    mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+            setMenu(false);
+            menuBtn.focus();
+        }
     });
 
-    // Handle contact form submission directly via Formspree AJAX
-    async function handleFormSubmit(event) {
-        event.preventDefault();
-        const form = document.getElementById('contact-form');
-        const successMsg = document.getElementById('success-msg');
-        const submitBtn = form.querySelector('button[type="submit"]');
-        const originalBtnText = submitBtn ? submitBtn.innerText : '';
+    // Pre-select the package when a pricing/audit link is clicked
+    const form = document.getElementById('contact-form');
+    const packageSelect = form.querySelector('[name="package"]');
+    document.querySelectorAll('[data-package]').forEach(link => {
+        link.addEventListener('click', () => { packageSelect.value = link.dataset.package; });
+    });
 
-        // Show loading state on button
-        if (submitBtn) {
-            submitBtn.innerText = 'Sending...';
-            submitBtn.disabled = true;
-        }
+    // Contact form: submit to Formspree via fetch (falls back to normal POST without JS)
+    const successMsg = document.getElementById('success-msg');
+    const errorMsg = document.getElementById('form-error');
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const FALLBACK = ' Please try again or email omar.lawrence.pm@gmail.com directly.';
+
+    function showError(text) {
+        errorMsg.textContent = text + FALLBACK;
+        errorMsg.classList.remove('hidden');
+        submitBtn.textContent = 'Send Message / Book Call';
+        submitBtn.disabled = false;
+    }
+
+    form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        errorMsg.classList.add('hidden');
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
 
         try {
             const response = await fetch(form.action, {
                 method: 'POST',
                 body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
+                headers: { 'Accept': 'application/json' }
             });
 
             if (response.ok) {
-                // Success: Hide form and reveal your custom inline success message
-                form.style.display = 'none';
-                if (successMsg) {
-                    successMsg.classList.remove('hidden');
-                }
-            } else {
-                alert('Oops! There was a problem submitting your request. Please try again or email omar.lawrence.pm@gmail.com directly.');
-                if (submitBtn) {
-                    submitBtn.innerText = originalBtnText;
-                    submitBtn.disabled = false;
-                }
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+                successMsg.focus();
+                return;
             }
-        } catch (error) {
-            alert('Unable to send at this moment. Please email omar.lawrence.pm@gmail.com directly.');
-            if (submitBtn) {
-                submitBtn.innerText = originalBtnText;
-                submitBtn.disabled = false;
-            }
+
+            let msg = 'There was a problem submitting your request.';
+            try {
+                const data = await response.json();
+                if (data.errors && data.errors.length) {
+                    msg = data.errors.map(e => e.message).join(' ');
+                }
+            } catch (_) { /* non-JSON error body */ }
+            showError(msg);
+        } catch (err) {
+            showError('Unable to send at this moment.');
         }
-    }
+    });
 </script>
 
 </body>
